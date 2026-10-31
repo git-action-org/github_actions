@@ -1,11 +1,11 @@
-name: Hello World
-on: 
+name: Hello World #workflow name
+on: #event
  push:
   branches: 
    - main 
 jobs:
- say-hello:
+ say-hello: #job-name
   runs-on : ubuntu-latest
   steps:
    - name: print Hello
-     run: echo "hello world"
+     run: echo "hello world from github actions"
