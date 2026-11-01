@@ -1,6 +1,8 @@
 name: Hello World #workflow name
 on: #event
  push:
+  paths-ignore:
+  - ".github/workflows/**"
   branches: 
    - main 
 jobs:
@@ -8,4 +10,4 @@ jobs:
   runs-on : ubuntu-latest
   steps:
    - name: print Hello
-     run: echo "hello world from github actions"
+     run: echo "hello world from github actions workflows"
