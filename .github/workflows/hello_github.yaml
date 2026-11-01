@@ -10,4 +10,4 @@ jobs:
   runs-on : ubuntu-latest
   steps:
    - name: print Hello
-     run: echo "hello world from github actions workflow"
+     run: echo "hello world from github actions workflows"
