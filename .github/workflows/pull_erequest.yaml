@@ -1,0 +1,11 @@
+name: pull-request
+on: 
+  pull_request:
+       branches:
+        - main
+jobs:
+  pull-request:
+   runs-on: ubuntu-latest
+   steps:
+    - name: build-step
+      run: echo "this is a pull request"
