@@ -1,6 +1,8 @@
 name: pull-request
 on: 
   pull_request:
+    paths-ignore:
+    - ".github/workflows/**"
     types: closed
     branches: 
     - main
