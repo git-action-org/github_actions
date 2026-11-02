@@ -1,11 +1,14 @@
 name: pull-request
 on: 
   pull_request:
-       branches:
-        - main
+    types: closed
+    branches: 
+    - main
 jobs:
-  pull-request:
-   runs-on: ubuntu-latest
-   steps:
-    - name: build-step
-      run: echo "this is a pull request"
+    after-merge:
+      name: pull-request 
+      if: github.event.pull_request.merged == true
+      runs-on: ubuntu-latest
+      steps:
+      - name: build-step
+        run: echo "this is a pull request"
