@@ -1,0 +1,10 @@
+name: demo-create-branch-tag
+on:
+  create:
+jobs: 
+  branch-info:
+    if: github.event.ref-type == 'branch'
+    runs-on: ubuntu-latest
+    steps:
+    - name: New-Branch-info 
+      run: echo "New branch created ${{github.event.ref}}"
