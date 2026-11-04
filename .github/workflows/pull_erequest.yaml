@@ -3,6 +3,7 @@ on:
   pull_request:
     paths-ignore: [".github/workflows/**","github/workflows/*.yaml"]
     types: [closed]
+    types: [closed,opned]
     branches: 
     - main
 jobs:

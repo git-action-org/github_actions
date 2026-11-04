@@ -1,0 +1,9 @@
+name: wf-dispatch
+on:
+  workflow-dispatch
+jobs:
+  name: wd-job
+  runs-on: ubuntu-latest
+  steps: 
+  - name: 
+    run: echo "Hello, workflow dispatch"
