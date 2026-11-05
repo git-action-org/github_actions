@@ -3,6 +3,7 @@ on:
   create:
     branches:
     - "*"
+  delete:
 jobs: 
   branch-info:
     if: github.event.ref_type == 'branch'
@@ -17,4 +18,11 @@ jobs:
     steps: 
     - name: New-tag-info
       run: echo "New ${{github.evnet.ref_type}} is created-${{github.event.ref}}"
+
+  branch-delete:
+    if: github.event_name == 'delete'
+    runs-on: ubuntu-latest
+    steps: 
+    - name: Branch-deletion
+      run: echo "${{github.event.ref_type}} is deleted ${{github.event.ref}}"
 
