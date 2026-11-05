@@ -2,11 +2,10 @@ name: demo-create-branch-tag
 on:
   create:
     branches:
-    - "*"
 jobs: 
   branch-info:
-    if: github.event.ref-type == 'branch'
+    if: github.event.ref_type == 'branch'
     runs-on: ubuntu-latest
     steps:
     - name: New-Branch-info 
-      run: echo "New branch created ${{github.event.ref}}"
+      run: echo "New branch created ${{github.event.ref_type}},${{github.event.ref}}"
