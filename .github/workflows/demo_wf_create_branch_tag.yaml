@@ -6,11 +6,11 @@ on:
   delete:
 jobs: 
   branch-info:
-    if: github.event.ref_type == 'branch'
+    if: github.event.ref_type == 'branch' && github.event_type == 'create'
     runs-on: ubuntu-latest
     steps:
     - name: New-Branch-info 
-      run: echo "New branch created ${{github.event.ref_type}},${{github.event.ref}}"
+      run: echo "New branch is  created ${{github.event.ref_type}},${{github.event.ref}}"
 
   tag-info:
     if: github.event.ref == 'tag'
