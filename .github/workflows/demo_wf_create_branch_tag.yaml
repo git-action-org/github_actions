@@ -1,6 +1,8 @@
 name: demo-create-branch-tag
 on:
   create:
+    branches:
+    - "*"
 jobs: 
   branch-info:
     if: github.event.ref-type == 'branch'
